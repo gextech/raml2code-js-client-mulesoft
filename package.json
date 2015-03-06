@@ -2,7 +2,7 @@
   "name": "raml2code-js-client-mulesoft",
   "version": "0.0.1",
   "description": "Javascrispt client generator from RAML Spec",
-  "main": "lib/groovy-pojo/index.js",
+  "main": "lib/js-client/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
