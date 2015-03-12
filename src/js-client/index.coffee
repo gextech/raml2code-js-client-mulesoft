@@ -20,7 +20,9 @@ helpers = {
 }
 
 generator.helpers = extend({}, defaultHelpers, helpers)
-generator.template =  require('raml-client-generator/languages/javascript//templates/index.js.hbs')
+generator.template =  { "{{fileName}}Client.js":
+  require('raml-client-generator/languages/javascript//templates/index.js.hbs')
+}
 
 camelCase = require('raml-client-generator/node_modules/camel-case')
 
@@ -31,10 +33,9 @@ generator.parser = (data) ->
       variable: camelCase
 
   model = context(data, spec)
-  result = {}
   version =  if data.version then "#{data.version}/" else ""
-  result["#{version}#{camelCase(model.title)}Client.js"] = model
-  parsed.push result
+  model.fileName = "#{version}#{camelCase(model.title)}"
+  parsed.push model
   parsed
 
 
