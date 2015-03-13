@@ -1,6 +1,6 @@
 {
   "name": "raml2code-js-client-mulesoft",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Javascrispt client generator from RAML Spec",
   "main": "lib/js-client/index.js",
   "scripts": {
