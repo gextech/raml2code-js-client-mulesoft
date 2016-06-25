@@ -1,4 +1,4 @@
-extend  = require('raml-client-generator/node_modules/extend');
+extend  = require('extend');
 languages  = require('raml-client-generator/languages');
 context = require('raml-client-generator/lib/compile/context');
 
@@ -13,7 +13,7 @@ generator.partials = {
 }
 
 helpers = {
-  stringify:         require('raml-client-generator/node_modules/javascript-stringify'),
+  stringify:         require('javascript-stringify'),
   dependencies:      require('raml-client-generator/languages/javascript/helpers/dependencies'),
   requestSnippet:    require('raml-client-generator/languages/javascript/helpers/request-snippet'),
   parametersSnippet: require('raml-client-generator/languages/javascript/helpers/parameters-snippet')
@@ -29,7 +29,7 @@ generator.templates =  [
     require('raml-client-generator/languages/javascript/templates/README.md.hbs')}
 ]
 
-camelCase = require('raml-client-generator/node_modules/camel-case')
+camelCase = require('camel-case')
 
 generator.parser = (data) ->
   parsed = []

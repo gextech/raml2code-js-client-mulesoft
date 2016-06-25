@@ -14,6 +14,6 @@ describe('Must run on raml2code', function () {
   };
 
   it('should generate a js client from RAML file', gatitosAPI);
-  it('should generate a js client from RAML file', readme);
+  it('should generate a README.md from RAML file', readme);
 
 });
